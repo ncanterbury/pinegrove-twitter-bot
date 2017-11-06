@@ -26,11 +26,11 @@ def compose_tweet():
                 lyrics.append(verse)
                 verse = []
 
-    print "this is lyrics"
+  
     if lyrics == []:
-        print "Error occured, lyrics is empty. This is song name"
-        print song_name
-    print lyrics
+        print ("Error occured, lyrics is empty. This is song name")
+        print (song_name)
+ 
     
     '''
     The lyrics array is a list of lists where each 
@@ -42,26 +42,16 @@ def compose_tweet():
     char_lim = 140
     num_verse = random.randrange(len(lyrics))
     selected_verse = lyrics[num_verse]
-    
-    print ""
-    print "this is selected verse"
-    print ""
-    print selected_verse
-    
+   
     line_count = 0
     while (len(compose)+len(selected_verse[line_count]) < char_lim)\
             and line_count < len(selected_verse):
         if line_count != 0:
             compose += ", "
-        print "this is line_count"
-        print line_count
-        compose += selected_verse[line_count]
+       compose += selected_verse[line_count]
  
         line_count += 1
-    print ""
-    print "this is compose"
-    print compose
-    return compose  
+   return compose  
 
 def get_song():
     song_names = os.listdir("lyrics/")
@@ -82,7 +72,7 @@ def tweet(text):
         log(e.message)
     else:
         log("Tweeted " + text)
-
+    
 def log(message):
     """Log message to logfile"""
     path = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
