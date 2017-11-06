@@ -48,7 +48,7 @@ def compose_tweet():
             and line_count < len(selected_verse):
         if line_count != 0:
             compose += ", "
-       compose += selected_verse[line_count]
+        compose += selected_verse[line_count]
  
         line_count += 1
    return compose  
