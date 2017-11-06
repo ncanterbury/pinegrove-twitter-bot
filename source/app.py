@@ -51,7 +51,7 @@ def compose_tweet():
         compose += selected_verse[line_count]
  
         line_count += 1
-   return compose  
+    return compose  
 
 def get_song():
     song_names = os.listdir("lyrics/")
